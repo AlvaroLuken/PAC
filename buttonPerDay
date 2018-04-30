@@ -33,23 +33,22 @@ void loop()
     delay(150);
   }
 
-  if(counter == 0)
-    servo.write (25);  // zero degrees
-  else if(counter == 1)
-    servo.write(45);
-  else if(counter == 2)
+  if(counter == 0) // load pills
+    servo.write (25);  
+  else if(counter == 1) // Monday
+    servo.write(45);  
+  else if(counter == 2) // Tuesday
     servo.write (65); 
-  else if(counter == 3)  
-    servo.write (85);
-  //else reset the counter to 0 which resets thr servo to 0 degrees
-  else if (counter == 4) 
-    servo.write(105);
-  else if (counter == 5) 
-    servo.write(125);
-  else if (counter == 6)
-    servo.write(145);
-  else if (counter == 7)
+  else if(counter == 3) // Wednesday
+    servo.write (85); 
+  else if (counter == 4) //Thursday
+    servo.write(105); 
+  else if (counter == 5) // Friday
+    servo.write(125); 
+  else if (counter == 6) // Saturday
+    servo.write(145); 
+  else if (counter == 7) // Sunday
     servo.write(165);
   else
-    counter = 0;
+    counter = 0; //else reset the counter to 0 which resets the servo to 0 degrees
 }
